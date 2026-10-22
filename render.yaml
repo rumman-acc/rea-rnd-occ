@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: operations-control-center
+    runtime: node
+    plan: 0.5c-512mb
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: APP_DATA_DIR
+        value: /var/data
+    disk:
+      name: operations-data
+      mountPath: /var/data
+      sizeGB: 1

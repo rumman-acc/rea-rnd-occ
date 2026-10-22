@@ -26,7 +26,7 @@ Set `AUTH_SECRET` to change the cookie-signing secret. The login is demo-grade; 
 
 ## Deploy to Render
 
-The repository includes `../render.yaml`, so it can be deployed as a Render Blueprint. In Render, choose
+The repository includes `render.yaml`, so it can be deployed as a Render Blueprint. In Render, choose
 **New > Blueprint**, connect this repository, and apply the detected Blueprint. It creates a Node web service,
 generates `AUTH_SECRET`, uses `/api/health` for health checks, and mounts a 1 GB persistent disk at `/var/data`.
 
@@ -35,8 +35,8 @@ use that disk, so this deployment must remain single-instance. The configured Re
 paid resources. For a disposable free demo, remove `plan`, `disk`, and `APP_DATA_DIR` from `render.yaml`; all
 changes made in the app will then be lost whenever Render restarts or redeploys the service.
 
-For a manual Render web-service setup, use `dashboard` as the root directory, `npm ci && npm run build` as the
-build command, `npm start` as the start command, and `/api/health` as the health-check path. Set `AUTH_SECRET` to
+For a manual Render web-service setup, leave the root directory empty, use `npm ci && npm run build` as the build
+command, `npm start` as the start command, and `/api/health` as the health-check path. Set `AUTH_SECRET` to
 a long random value. If data must survive restarts, mount a disk at `/var/data` and set `APP_DATA_DIR=/var/data`.
 
 ## Layout
