@@ -1,0 +1,217 @@
+.wh-loading {
+  padding: 64px 0;
+  text-align: center;
+  color: var(--ink2);
+}
+.wh-error {
+  color: var(--bad);
+  font-size: 12px;
+  font-weight: 600;
+}
+.wh .mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.wh-po {
+  margin-bottom: 12px;
+}
+.wh-po__head {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  padding: 12px 16px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.wh-po__head:hover {
+  background: var(--surface2);
+}
+.wh-po__left,
+.wh-po__right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.wh-po__right {
+  font-size: 11.5px;
+  color: var(--ink2);
+}
+.wh-po__body {
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--line);
+}
+.wh-box {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(22, 163, 74, 0.4);
+  border-radius: 8px;
+  background: var(--ok-light);
+  font-size: 12px;
+}
+.wh-box--bad {
+  border-color: rgba(220, 38, 38, 0.4);
+  background: rgba(254, 226, 226, 0.4);
+}
+.wh-lines {
+  margin-top: 12px;
+}
+.wh-lines input[type="number"] {
+  width: 80px;
+  text-align: right;
+}
+.wh-lines input.wh-over {
+  border-color: var(--warn);
+  background: #fff7ed;
+}
+.wh-lines select {
+  width: 104px;
+}
+.wh-note {
+  display: block;
+  max-width: 170px;
+  font-size: 10px;
+  color: var(--ink3, var(--ink2));
+}
+.wh-note--warn {
+  color: var(--warn-dark);
+  font-weight: 600;
+}
+.wh-prior {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface2);
+  font-size: 11.5px;
+}
+.wh-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+.wh-foot__date {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: var(--ink2);
+}
+.wh-link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--brand);
+  text-decoration: underline dotted;
+  cursor: pointer;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: inherit;
+}
+.wh-th {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.wh-filter {
+  display: block;
+  width: 100%;
+  min-width: 52px;
+  margin-top: 4px;
+  padding: 2px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: none;
+}
+.wh-filter::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.wh-sub {
+  display: flex;
+  gap: 4px;
+}
+.wh-hl {
+  background: var(--ok-light);
+  font-weight: 700;
+}
+.wh-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(13, 46, 82, 0.45);
+}
+.wh-modal__box {
+  width: min(560px, 100%);
+  max-height: 80vh;
+  overflow: auto;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+.wh-modal__title {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+.wh-modal__foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.wh-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.wh-form .field input,
+.wh-form .field select {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.wh-pair {
+  display: flex;
+  gap: 4px;
+}
+.wh-settings {
+  display: grid;
+  max-width: 760px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  .wh-settings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.wh-help {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink2);
+}
+.wh-nowrap td {
+  white-space: nowrap;
+}
+.wh-nopad { padding: 0 !important; }

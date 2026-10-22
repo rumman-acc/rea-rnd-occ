@@ -1,0 +1,221 @@
+.sx-sort {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.sx-sort:disabled {
+  cursor: default;
+}
+.sx-filter {
+  display: block;
+  width: 100%;
+  min-width: 52px;
+  margin-top: 4px;
+  padding: 2px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #fff;
+  outline: none;
+}
+.sx-filter::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.sx-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin-bottom: 16px;
+}
+.sx-chip {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--navy);
+  color: #fff;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+.sx-title {
+  font-size: 14.5px;
+  font-weight: 800;
+}
+.sx-sub {
+  font-size: 11.5px;
+  color: var(--ink2);
+}
+.sx-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  color: var(--brand);
+  text-decoration: underline dotted;
+  cursor: pointer;
+}
+.sx-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.sx-sub-row {
+  background: rgba(230, 238, 248, 0.5);
+}
+.sx-bad {
+  color: var(--bad);
+}
+.sx-ok {
+  color: var(--ok);
+}
+.sx-pill-navy {
+  background: var(--navy);
+  color: #fff;
+}
+.sx-chartrow td {
+  padding: 12px !important;
+  background: var(--surface2);
+}
+.sx-chart {
+  max-width: 100%;
+}
+.sx-note {
+  padding: 10px 16px;
+  font-size: 11px;
+  color: var(--ink2);
+}
+.sx-hl {
+  background: var(--brand-light);
+  outline: 2px solid var(--brand);
+  outline-offset: -2px;
+}
+.sx-overdue {
+  font-weight: 700;
+  color: var(--bad);
+}
+.sx-bar {
+  display: inline-block;
+  width: 96px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--line);
+}
+.sx-bar > span {
+  display: block;
+  height: 100%;
+}
+.sx-bar--ok {
+  background: var(--ok);
+}
+.sx-bar--warn {
+  background: var(--warn);
+}
+.sx-bar--bad {
+  background: var(--bad);
+}
+.sx-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(13, 46, 82, 0.45);
+}
+.sx-modal__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.sx-modal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.sx-modal__head h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+}
+.sx-modal__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+.sx-modal__foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--line);
+  background: var(--surface2);
+}
+.sx-panel {
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.sx-panel--ai {
+  border-color: #cdb8f2;
+  background: #f6f1fd;
+}
+.sx-panel--ok {
+  border: 2px solid rgba(22, 163, 74, 0.5);
+  background: rgba(220, 252, 231, 0.6);
+}
+.sx-kv {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12.5px;
+}
+.sx-kv:last-child {
+  border-bottom: 0;
+}
+.sx-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.sx-approve {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface2);
+  font-size: 12px;
+}
+.sx-wide {
+  overflow-x: auto;
+}

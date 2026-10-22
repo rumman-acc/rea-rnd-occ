@@ -1,0 +1,39 @@
+.prd-table th { vertical-align: top; }
+.prd-table td { white-space: nowrap; }
+.prd-table tr.prd-row--late { background: #fff8f8; }
+.prd-table tr.prd-row--tight { background: #fffbf0; }
+.prd-cust { max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+.prd-switch { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface2); }
+.prd-switch button { padding: 6px 12px; border: 0; border-radius: 6px; background: transparent; font-size: 12.5px; font-weight: 700; color: var(--ink2); cursor: pointer; }
+.prd-switch button.is-active { background: var(--brand); color: #fff; }
+.prd-progress { display: flex; align-items: center; gap: 6px; }
+.prd-progress__track { width: 64px; height: 5px; overflow: hidden; border-radius: 3px; background: var(--line); }
+.prd-progress__fill { height: 100%; }
+.prd-progress__fill--ok { background: var(--ok); }
+.prd-progress__fill--warn { background: var(--warn); }
+.prd-progress__fill--bad { background: var(--bad); }
+.prd-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+@media (min-width: 1024px) { .prd-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.prd-intel { margin-bottom: 16px; padding: 16px; border: 1px solid #cdbbef; border-radius: 12px; background: #f5f0fd; font-size: 12.5px; line-height: 1.5; }
+.prd-intel__title { margin-bottom: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #7c4dd2; }
+.prd-ok { color: var(--ok); }
+.prd-buf--late { color: var(--bad); font-weight: 700; }
+.prd-buf--tight { color: var(--warn); font-weight: 700; }
+.prd-buf--ok { color: var(--ok); font-weight: 700; }
+.prd-buf--none { color: var(--ink3); font-weight: 700; }
+.prd-demo { margin-top: 16px; }
+.prd-error { margin-bottom: 12px; }
+
+/* shared by capacity / costing / gantt */
+.prd-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+@media (min-width: 1024px) { .prd-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.prd-form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; }
+.prd-form .input, .prd-form .select { width: 130px; }
+.prd-form .input--narrow { width: 80px; }
+.prd-section { margin-top: 16px; }
+.prd-heat { text-align: right; font-variant-numeric: tabular-nums; }
+.prd-heat--ok { background: #e8f7ee; }
+.prd-heat--tight { background: #fef3c7; }
+.prd-heat--over { background: #fee2e2; color: var(--bad-dark); font-weight: 700; }
+.prd-saved { color: var(--ok); font-size: 12px; }
+.pill--navy { background: var(--navy); color: #fff; }

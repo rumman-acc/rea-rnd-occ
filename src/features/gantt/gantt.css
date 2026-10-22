@@ -1,0 +1,20 @@
+.gantt { display: flex; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; }
+.gantt__labels { flex: 0 0 190px; border-right: 1px solid var(--line); background: var(--surface); }
+.gantt__head { display: flex; height: 26px; align-items: center; padding: 0 8px; background: var(--navy); color: #fff; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.gantt__label { display: flex; width: 100%; height: 30px; align-items: center; gap: 6px; padding: 0 8px; border: 0; border-bottom: 1px solid var(--line); background: transparent; font-size: 12px; text-align: left; cursor: pointer; }
+.gantt__label.is-selected { background: var(--brand-light); }
+.gantt__scroll { flex: 1; min-width: 0; overflow-x: auto; }
+.gantt__canvas { position: relative; }
+.gantt__head .gantt__week { flex: none; padding-left: 4px; border-left: 1px solid rgba(255, 255, 255, 0.25); }
+.gantt__canvas > .gantt__head { padding: 0; }
+.gantt__row { position: relative; height: 30px; border-bottom: 1px solid var(--line); background-image: linear-gradient(to right, var(--line) 1px, transparent 1px); background-size: 112px 100%; }
+.gantt__today { position: absolute; top: 26px; bottom: 0; width: 2px; background: var(--bad); opacity: 0.7; z-index: 2; }
+.gantt-bar { position: absolute; top: 6px; height: 18px; overflow: hidden; padding: 0; border: 1px solid transparent; border-radius: 4px; cursor: pointer; }
+.gantt-bar--green { background: #86d6a4; border-color: var(--ok); }
+.gantt-bar--yellow { background: #f6d189; border-color: var(--warn); }
+.gantt-bar--red { background: #f3a5a5; border-color: var(--bad); }
+.gantt-bar--none { background: #cfd6df; border-color: var(--ink3); }
+.gantt-bar--changed { border-style: dashed; border-width: 2px; }
+.gantt-bar.is-selected { outline: 2px solid var(--brand); }
+.gantt-bar__progress { position: absolute; inset: 0 auto 0 0; background: rgba(13, 46, 82, 0.35); }
+.gantt__due { position: absolute; top: 7px; z-index: 1; font-size: 12px; color: var(--navy); pointer-events: none; transform: translateX(-50%); }
